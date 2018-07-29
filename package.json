@@ -52,9 +52,11 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "sha.js": "^2.4.11"
+    "axios": "^0.18.0"
   },
   "devDependencies": {
+    "sinon": "^6.1.4",
+    "@types/sinon": "^5.0.1",
     "ava": "^1.0.0-beta.5.1",
     "codecov": "^3.0.2",
     "cz-conventional-changelog": "^2.1.0",
