@@ -14,6 +14,14 @@ test.before(t => {
   };
 });
 
+test('post return type', t => {
+    const context: any = t.context;
+    const apiClient = new APIClient('token');
+    const req = apiClient.post(context.payload);
+
+    t.true(req instanceof Promise);
+});
+
 test('post request', t => {
   const context: any = t.context;
   const apiClient = new APIClient('token');
