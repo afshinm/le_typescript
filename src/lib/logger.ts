@@ -25,7 +25,7 @@ export class Logger {
      *
      * @returns {Promise<any>}
      */
-    public async info() {
-        return await this.send(new Log(LogLevel.Info));
+    public async info(message: string) {
+        return await this.send(new Log(LogLevel.Info, message));
     }
 }
