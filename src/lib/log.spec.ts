@@ -11,7 +11,22 @@ test('log constructor', t => {
     t.deepEqual(_log.level, 'info')
 });
 
-test('log.stringify', t => {
+test('info log.stringify', t => {
     const _log: Log = t.context as Log;
     t.deepEqual(_log.stringify(), '[info] test')
+});
+
+test('warn log.stringify', t => {
+    const _log = new Log(LogLevel.Warning, 'test');
+    t.deepEqual(_log.stringify(), '[warn] test')
+});
+
+test('log log.stringify', t => {
+    const _log = new Log(LogLevel.Log, 'test');
+    t.deepEqual(_log.stringify(), '[log] test')
+});
+
+test('error log.stringify', t => {
+    const _log = new Log(LogLevel.Error, 'test');
+    t.deepEqual(_log.stringify(), '[error] test')
 });

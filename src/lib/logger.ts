@@ -17,6 +17,7 @@ export class Logger {
     private async send(log: Log) {
         return this._client.post({
             'level': log.level,
+            'message': log.message,
         });
     }
 
@@ -27,5 +28,32 @@ export class Logger {
      */
     public async info(message: string) {
         return await this.send(new Log(LogLevel.Info, message));
+    }
+
+    /**
+     * Sends an "error" log
+     *
+     * @returns {Promise<any>}
+     */
+    public async error(message: string) {
+        return await this.send(new Log(LogLevel.Error, message));
+    }
+
+    /**
+     * Sends an "log" log
+     *
+     * @returns {Promise<any>}
+     */
+    public async log(message: string) {
+        return await this.send(new Log(LogLevel.Log, message));
+    }
+
+    /**
+     * Sends an "warning" log
+     *
+     * @returns {Promise<any>}
+     */
+    public async warning(message: string) {
+        return await this.send(new Log(LogLevel.Warning, message));
     }
 }
