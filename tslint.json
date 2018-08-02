@@ -15,12 +15,7 @@
     // Functional style rules
     //"no-this": true,
     //"no-class": true,
-    "class-name": false, // TODO: for some weird reason it identifies `const`s as class therefore I had to turn it off
-    "no-expression-statement": [
-      true,
-      { "ignore-prefix": ["console.", "process.exit"] }
-    ],
-    "no-if-statement": true
+    "class-name": false // TODO: for some weird reason it identifies `const`s as class therefore I had to turn it off
     /* end tslint-immutable rules */
   }
 }
