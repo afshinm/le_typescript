@@ -6,8 +6,8 @@ export enum LogLevel {
 }
 
 export class Log {
-    readonly level: LogLevel;
-    readonly message: string;
+    public readonly level: LogLevel;
+    public readonly message: string;
 
     constructor(level: LogLevel, message: string) {
         this.level = level;

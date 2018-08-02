@@ -1,8 +1,9 @@
 import { test } from 'ava';
-import sinon from 'sinon';
 import axios from 'axios';
-import { APIClient } from './api_client';
+import sinon from 'sinon';
 import config from '../config';
+import { APIClient } from './api_client';
+
 
 test.before(t => {
     t.context = {

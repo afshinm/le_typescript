@@ -1,5 +1,5 @@
-import { Log, LogLevel } from './log';
 import { APIClient } from './api_client';
+import { Log, LogLevel } from './log';
 
 export class Logger {
     private client: APIClient;
