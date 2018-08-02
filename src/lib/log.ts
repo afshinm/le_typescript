@@ -6,8 +6,8 @@ export enum LogLevel {
 }
 
 export class Log {
-    public level: LogLevel;
-    public message: string;
+    readonly level: LogLevel;
+    readonly message: string;
 
     constructor(level: LogLevel, message: string) {
         this.level = level;
@@ -17,7 +17,5 @@ export class Log {
     /**
      * Converts the Log object to string
      */
-    public stringify(): string {
-        return `[${this.level}] ${this.message}`;
-    }
+    public stringify = () => `[${this.level}] ${this.message}`;
 }

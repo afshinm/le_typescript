@@ -5,15 +5,15 @@ import { Logger } from './logger';
 
 
 test('logger.info should return a promise', t => {
-    const _logger = new Logger('token');
-    t.true(_logger.info('test') instanceof Promise);
+    const logger = new Logger('token');
+    t.true(logger.info('test') instanceof Promise);
 });
 
-test('logger.info should call the API client', t => {
+test("logger.info should call the API client", t => {
     const apiClient = sinon.stub(APIClient.prototype, 'post');
     const logger = new Logger('token');
 
-    logger.warning("test log")
+    logger.warning("test log");
 
     t.true(apiClient.calledOnceWithExactly({level: 'warn', message: 'test log'}))
 });

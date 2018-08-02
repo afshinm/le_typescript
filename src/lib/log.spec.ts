@@ -7,26 +7,26 @@ test.before(t => {
 });
 
 test('log constructor', t => {
-    const _log: Log = t.context as Log;
-    t.deepEqual(_log.level, 'info')
+    const log: Log = t.context as Log;
+    t.deepEqual(log.level, 'info')
 });
 
 test('info log.stringify', t => {
-    const _log: Log = t.context as Log;
-    t.deepEqual(_log.stringify(), '[info] test')
+    const log: Log = t.context as Log;
+    t.deepEqual(log.stringify(), '[info] test')
 });
 
 test('warn log.stringify', t => {
-    const _log = new Log(LogLevel.Warning, 'test');
-    t.deepEqual(_log.stringify(), '[warn] test')
+    const log = new Log(LogLevel.Warning, 'test');
+    t.deepEqual(log.stringify(), '[warn] test')
 });
 
 test('log log.stringify', t => {
-    const _log = new Log(LogLevel.Log, 'test');
-    t.deepEqual(_log.stringify(), '[log] test')
+    const log = new Log(LogLevel.Log, 'test');
+    t.deepEqual(log.stringify(), '[log] test')
 });
 
 test('error log.stringify', t => {
-    const _log = new Log(LogLevel.Error, 'test');
-    t.deepEqual(_log.stringify(), '[error] test')
+    const log = new Log(LogLevel.Error, 'test');
+    t.deepEqual(log.stringify(), '[error] test')
 });

@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint:latest", "tslint-config-prettier", "tslint-immutable"],
+  "extends": ["tslint:latest", "tslint-config-prettier"],
   "rules": {
     "interface-name": [true, "never-prefix"],
     // TODO: allow devDependencies only in **/*.spec.ts files:
@@ -12,18 +12,10 @@
     "no-parameter-reassignment": true,
     "typedef": [true, "call-signature"],
 
-    // Immutability rules
-    "readonly-keyword": true,
-    "readonly-array": true,
-    "no-let": true,
-    "no-object-mutation": true,
-    "no-delete": true,
-    "no-method-signature": true,
-
     // Functional style rules
-    "no-this": true,
-    "no-class": true,
-    "no-mixed-interface": true,
+    //"no-this": true,
+    //"no-class": true,
+    "class-name": false, // TODO: for some weird reason it identifies `const`s as class therefore I had to turn it off
     "no-expression-statement": [
       true,
       { "ignore-prefix": ["console.", "process.exit"] }

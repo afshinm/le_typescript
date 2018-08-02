@@ -2,10 +2,10 @@ import axios from 'axios';
 import config from '../config';
 
 export class APIClient {
-    private readonly _baseURL: string;
+    private readonly baseURL: string;
 
     constructor(token: string, useSSL: boolean = true) {
-        this._baseURL =
+        this.baseURL =
             (useSSL ? 'https' : 'http') +
             '://' +
             config.api.endpoint +
@@ -13,7 +13,7 @@ export class APIClient {
             token;
     }
 
-    public async post(payload: object) {
-       return await axios.post(this._baseURL, payload);
+    public async post(payload: object): Promise<any> {
+       return axios.post(this.baseURL, payload);
     }
 }
