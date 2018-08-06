@@ -23,6 +23,12 @@ const logger = new Logger('YOUR_TOKEN');
 
 ```
 
+### TODO
+
+- Adding stacktrace to the logs
+- Global error catcher
+- Adding platform info to the logs
+
 ### License
 
 MIT
