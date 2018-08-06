@@ -1,9 +1,14 @@
-# LogEntries (Rapid7 InsightOps) SDK in TypeScript
+# LogEntries (Rapid7 InsightOps) SDK in TypeScript 
 
 - Simple & easy to use API 
 - Promise interface
 - Works in NodeJS and Browser
 - Fully tested
+
+[![Build Status](https://travis-ci.com/afshinm/le_typescript.svg?branch=master)](https://travis-ci.com/afshinm/le_typescript)
+[![License](https://img.shields.io/github/license/afshinm/le_typescript.svg)](https://github.com/afshinm/le_typescript)
+[![Dependency Status](https://img.shields.io/david/afshinm/le_typescript.svg)](https://david-dm.org/afshinm/le_typescript)
+
 
 
 ## Usage
