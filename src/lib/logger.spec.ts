@@ -1,14 +1,14 @@
 import { test } from 'ava';
-import sinon from 'sinon';
 import nock from 'nock';
+import sinon from 'sinon';
+import config from '../config';
 import { APIClient } from './api_client';
 import { Logger } from './logger';
-import config from '../config';
 
-test.before(_=> {
+test.before(_ => {
   nock(`https://${config.api.endpoint}`)
     .persist()
-    .post( '/logs/token')
+    .post('/logs/token')
     .reply(200);
 });
 
@@ -23,9 +23,7 @@ test('logger.info should call the API client', t => {
 
   logger.warning('test log');
 
-  t.true(
-    apiClient.calledOnceWithExactly({ level: 'warn', message: 'test log' })
-  );
+  t.true(apiClient.calledOnceWithExactly({ level: 'warn', event: 'test log' }));
 
   apiClient.restore();
 });

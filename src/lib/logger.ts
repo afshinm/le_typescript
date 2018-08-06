@@ -52,8 +52,8 @@ export class Logger {
    */
   private async send(log: Log): Promise<any> {
     return this.client.post({
-      level: log.level,
-      message: log.message
+      event: log.message,
+      level: log.level
     });
   }
 }
