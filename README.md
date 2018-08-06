@@ -1,4 +1,4 @@
-## LogEntries (Rapid7 InsightOps) SDK in TypeScript
+# LogEntries (Rapid7 InsightOps) SDK in TypeScript
 
 - Simple & easy to use API 
 - Promise interface
@@ -6,7 +6,7 @@
 - Fully tested
 
 
-### Usage
+## Usage
 
 ```js
 const Logger = require('le').Logger;
@@ -19,19 +19,21 @@ const logger = new Logger('YOUR_TOKEN');
   await logger.info('boom');
   await logger.log('boom');
 })();
-
 ```
 
-### Documentation
+Check out [documentation](https://afshinm.github.io/le_typescript/docs/) page.
 
-https://afshinm.github.io/le_typescript/docs/
 
-### TODO
+## Documentation
+
+[https://afshinm.github.io/le_typescript/docs/](https://afshinm.github.io/le_typescript/docs/)
+
+## TODO
 
 - Adding stacktrace to the logs
 - Global error catcher
 - Adding platform info to the logs
 
-### License
+## License
 
 MIT
