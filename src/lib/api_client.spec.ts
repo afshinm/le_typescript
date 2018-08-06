@@ -7,7 +7,7 @@ import { APIClient } from './api_client';
 test.before(t => {
   t.context = {
     axiosPost: sinon.stub(axios, 'post'),
-    endpoint: '://' + config.api.endpoint + config.api.prefix + 'token',
+    endpoint: '://' + config.api.endpoint + config.api.prefix + '/token',
     payload: {
       boo: 1
     }

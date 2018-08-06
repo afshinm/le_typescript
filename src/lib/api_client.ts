@@ -10,7 +10,7 @@ export class APIClient {
       '://' +
       config.api.endpoint +
       config.api.prefix +
-      token;
+      '/' + token;
   }
 
   public async post(payload: object): Promise<any> {
