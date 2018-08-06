@@ -1,4 +1,4 @@
-## LogEntries (Rapid7 InsightOps) in TypeScript
+## LogEntries (Rapid7 InsightOps) SDK in TypeScript
 
 - Simple & easy to use API 
 - Promise interface
@@ -7,7 +7,6 @@
 
 
 ### Usage
-
 
 ```js
 const Logger = require('le').Logger;
