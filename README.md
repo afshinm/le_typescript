@@ -22,6 +22,10 @@ const logger = new Logger('YOUR_TOKEN');
 
 ```
 
+### Documentation
+
+https://afshinm.github.io/le_typescript/docs/
+
 ### TODO
 
 - Adding stacktrace to the logs
